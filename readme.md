@@ -7,12 +7,14 @@ A good process would be to set this repo as a submodule to the language specific
 Files in this repository:
 1. concept.jpg
 2. concept.json - credits/license for the photo
-3. process.json - instructions for cropping, compressing the base photo to 4:3.
+3. process.json - instructions for cropping, compressing the base photo to 4:3, 16:9
 
-# this doesn't have to be 1024 by 768, just 4:3.
-# deploy will then scale this to 1024x768 (typically)
+deploy will then scale this to 1024x768 (typically)
+
+Typical process.json:
 {
-    rect: [ 0, 0, 1024, 768],
+    "crop_4_3": [ 0, 0, 1024, 768],
+    "crop_16_9": [ 0, 0, 1920, 1024],
 }
 
 This repo can also contain various lottie files that can be tapped for use in deployments in success or failure sequences.
